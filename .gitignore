@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.myenv/
+myenv
+
+# VS Code settings and workspace files
+.vscode/
+*.code-workspace
+
+# MacOS system files
+.DS_Store
+
+# Logs and caches
+*.log
+*.cache/
+*.pytest_cache/
+pip-wheel-metadata/
+
+# Testing & Coverage Reports
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Compiled C extensions
+*.so
+
+# MyPy type checking cache
+.mypy_cache/
+
+# IDE & Editor-specific files
+.idea/
+*.sublime-workspace
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+MANIFEST
+
+# Generated documentation
+docs/_build/
+
+# Python dotenv files (secrets)
+.env
+*.env
