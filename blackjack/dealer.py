@@ -6,14 +6,10 @@ class Dealer:
     
     def hit(self, card):
         self.hand.add_card(card)
-    
-    def Stand():
-        # essentially just end turn, pass to dealer
-        pass
-    
-    def Check_bust():
-        # if sum cards > 21 then game over
-        pass
+        return "".join(f"{card.rank}{card.suit}")
     
     def reveal_first(self):
-        print(self.hand.cards[0])
+        print(f"Dealer's first card: {self.hand.cards[0].rank}{self.hand.cards[0].suit}")
+        
+    def reveal_cards(self):
+        print(self.hand)
