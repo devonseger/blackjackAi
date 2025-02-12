@@ -6,7 +6,7 @@ from blackjack import dealer
 class Game:
     def __init__(self):
         self.deck = deck.Deck()
-        print(len(self.deck.cards))
+        print(f"Initialized Deck with: {len(self.deck.cards)} cards.")
         self.player = player.Player()
         self.dealer = dealer.Dealer()
         
@@ -31,6 +31,9 @@ class Game:
     def is_blackjack(self, hand):
         """returns True if blackjack"""
         return hand.get_total() == 21
+    
+    def reveal_cards(self, hand):
+        return hand
 
     def start_game(self):
         if len(self.deck.cards) == 52:
@@ -38,6 +41,7 @@ class Game:
                 self.dealer.hit(self.deck.deal_card())
                 self.player.hit(self.deck.deal_card())
             self.dealer.reveal_first() # If ace offer insurance? then check if blackjack
+            print(f"Revealing player cards: {self.reveal_cards(self.player)}")
             if self.dealer.hand.cards[0].rank == "A":
                 print("First card is an ace")
                 # Insurance?

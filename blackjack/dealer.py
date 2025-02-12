@@ -13,3 +13,6 @@ class Dealer:
         
     def reveal_cards(self):
         print(self.hand)
+        
+    def __repr__(self):
+        return ", ".join(f"{card.rank}{card.suit}" for card in self.hand.cards)
