@@ -1,5 +1,5 @@
 import random
-from blackjack.card import Card  # ✅ Correct import path
+from blackjack.card import Card 
 
 class Deck:
     def __init__(self):
